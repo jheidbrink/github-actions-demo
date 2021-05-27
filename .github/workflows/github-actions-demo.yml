@@ -12,5 +12,5 @@ jobs:
       - run: echo "The repository ${{ github.repository }} has been cloned to the runner."
       - run: echo "The workflow is now ready to test your code on the runner."
       - run: |
-          ls ${{ github.workspace }}
+          ls -la ${{ github.workspace }}
       - run: echo "The job status is ${{ job.status }}."
