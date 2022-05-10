@@ -1,0 +1,14 @@
+name: Run On PR against master
+on:
+  pull_request:
+    type:
+      - opened
+      - reopened
+      - synchronize
+    branches:
+      - master
+jobs:
+  Info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is a PR against master, type one of opened, reopened, synchronize"

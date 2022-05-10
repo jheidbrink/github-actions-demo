@@ -1,0 +1,12 @@
+name: Run when on_pr runs
+on:
+  workflow_run:
+    workflows:
+      - "Run On PR against master"
+    branches:
+      - master
+jobs:
+  Info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo I have run because on_pr has run against master
